@@ -8,7 +8,7 @@
 
 1. Found the upstream from `go.mod`, then fetched every upstream branch and tag.
 2. Compared the fork's default branch with the upstream release it claims to be (`Cut v0.22.0 Release`).
-3. Fetched **all** fork refs (150 branches + tags) and counted commits that are reachable from any fork ref but from no upstream ref.
+3. Fetched **all** fork refs (154 branches + 62 tags) and counted commits that are reachable from any fork ref but from no upstream ref.
 
 ## Results
 
@@ -18,7 +18,7 @@
 | upstream `v0.22.0` commit | `d36178f3a6509954e6debcbf52c5ea179840d96a` (same SHA) |
 | `git diff --stat main v0.22.0` | empty (byte-identical tree) |
 | Fork commits (all branches + tags) not in upstream | **0** |
-| Fork branch heads missing from upstream | 0 of 150 |
+| Fork branch heads missing from upstream | 0 of 154 |
 
 Because the SHAs match, the trees, file contents and history all match too. Branches with names that suggest a bug, like `free-money`, `bug`, `super-secret-galena` and `no-fees`, are upstream's own development branches with identical SHAs (for example, `origin/free-money` = `upstream/free-money` = `4b5d662`).
 
